@@ -1,0 +1,81 @@
+.library {
+  padding-top: 0.5rem;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  overflow: scroll;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffff;
+  box-shadow: 2px 2px 50px rgb(153, 153, 153);
+}
+
+.library.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+h2 {
+  padding: 0.5rem;
+}
+.song-library-container {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 0.5rem;
+
+  justify-content: start;
+  transition: all 0.5s ease;
+  padding: 0.5rem;
+
+  &:hover {
+    background: rgba(105, 165, 185, 0.4);
+  }
+  cursor: pointer;
+
+  h3 {
+    font-size: 1.3rem;
+    align-self: end;
+  }
+  h4 {
+    font-weight: 100;
+    align-self: start;
+  }
+  img {
+    width: 100px;
+    grid-area: 1 / 1 / -1 /2;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.selected {
+  background: rgba(105, 165, 185, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}

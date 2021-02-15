@@ -1,0 +1,40 @@
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+
+  h1 {
+    color: rgb(12, 12, 12);
+  }
+
+  button {
+    padding: 0.5rem;
+    background: transparent;
+    border: 2px solid rgb(65, 65, 65);
+    border-radius: 4px;
+    color: rgb(100, 100, 100);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    &:hover {
+      color: #f3f3f3;
+      background: rgb(125, 125, 125);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    button {
+      z-index: 10;
+    }
+  }
+}
